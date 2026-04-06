@@ -1,0 +1,65 @@
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --accent: #2563eb;
+    --card-bg: #f3f4f6;
+}
+
+[data-theme="dark"] {
+    --bg: #121212;
+    --text: #f3f4f6;
+    --accent: #60a5fa;
+    --card-bg: #1e1e1e;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    transition: 0.3s;
+    line-height: 1.6;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    border-bottom: 1px solid #ccc;
+    z-index: 100;
+}
+
+.section { padding: 4rem 2rem; max-width: 1000px; margin: auto; }
+
+.grid, .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card, .project-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--accent);
+}
+
+.gallery-container img {
+    width: 100%;
+    max-width: 200px;
+    margin: 10px;
+    filter: grayscale(20%);
+    transition: 0.3s;
+}
+
+.gallery-container img:hover { filter: grayscale(0%); transform: scale(1.05); }
