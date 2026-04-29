@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Premium Portfolio - 1st Year AI & Machine Learning Student | Building Intelligent Solutions">
+    <title>Sudarshan Bhadule | AI & ML Student</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Mouse Spotlight Effect Background -->
+    <div class="spotlight"></div>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <span class="loading-text">Loading Experience...</span>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress" id="scroll-progress"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-text">Sudarshan Bhadule</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <canvas id="particles-canvas"></canvas>
+            <div class="hero-container">
+                <div class="hero-content reveal">
+                    <h2 class="greeting">Hi, I am</h2>
+                    <h1 class="name">Sudarshan Bhadule</h1>
+                    <div class="typewriter-container">
+                        <span class="role-prefix">I am a </span>
+                        <span class="typed-text"></span><span class="cursor-blink">|</span>
+                    </div>
+                    <p class="hero-description">
+                        I am a first-year student specializing in Artificial Intelligence & Machine Learning. I build
+                        intelligent solutions, explore data-driven algorithms, and am highly eager to learn and
+                        innovate.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary glow-effect">Hire Me</a>
+                        <a href="#projects" class="btn btn-secondary">View Projects</a>
+                        <a href="#" class="btn btn-outline" download>Download Resume <i
+                                class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper reveal">
+                    <div class="hero-image-container">
+                        <!-- Drop your profile picture in assets folder as profile.jpg -->
+                        <img src="assets/profile.jpg" alt="Profile" class="profile-img"
+                            onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22400%22%20viewBox%3D%220%200%20400%20400%22%3E%3Crect%20fill%3D%22%232a2a35%22%20width%3D%22400%22%20height%3D%22400%22%2F%3E%3Ctext%20fill%3D%22%236366f1%22%20font-family%3D%22sans-serif%22%20font-size%3D%2230%22%20dy%3D%2210.5%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3Eprofile.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                        <div class="avatar-glow"></div>
+                    </div>
+                    <div class="floating-badges">
+                        <div class="badge badge-1"><i class="fa-brands fa-react"></i></div>
+                        <div class="badge badge-2"><i class="fa-brands fa-node-js"></i></div>
+                        <div class="badge badge-3"><i class="fa-brands fa-python"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <div class="section-header reveal">
+                <h2 class="section-title">About <span>Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-container reveal">
+                <div class="about-image-container">
+                    <div class="about-image">
+                        <!-- Drop your image in assets folder as about.jpg -->
+                        <img src="assets/about.jpg" alt="About Me" class="about-img"
+                            onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22500%22%20height%3D%22500%22%20viewBox%3D%220%200%20500%20500%22%3E%3Crect%20fill%3D%22%232a2a35%22%20width%3D%22500%22%20height%3D%22500%22%2F%3E%3Ctext%20fill%3D%22%236366f1%22%20font-family%3D%22sans-serif%22%20font-size%3D%2230%22%20dy%3D%2210.5%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3Eabout.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3>Exploring Intelligence & Code</h3>
+                    <p class="about-text">
+                        I am a first-year AI & Machine Learning student based in India, driven by an insatiable
+                        curiosity for how data, algorithms, and code shape our modern world.
+                    </p>
+                    <p class="about-text">
+                        My primary focus is on mastering intelligent systems, predictive models, and software
+                        engineering. I am constantly building projects, exploring the latest in AI, and eagerly seeking
+                        opportunities to bring fresh, data-driven perspectives to innovative teams.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-rocket"></i>
+                            <span>Fast Learner</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-code"></i>
+                            <span>Clean Code</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-pen-nib"></i>
+                            <span>Creative Design</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Team Player</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section-padding">
+            <div class="section-header reveal">
+                <h2 class="section-title">My <span>Arsenal</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-container reveal">
+                <div class="skill-category glass-card">
+                    <h3><i class="fa-solid fa-laptop-code"></i> Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill">
+                            <div class="skill-info"><span>HTML & CSS</span><span>95%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-info"><span>JavaScript</span><span>90%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-info"><span>React.js</span><span>85%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3><i class="fa-solid fa-server"></i> Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill">
+                            <div class="skill-info"><span>Node.js</span><span>80%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-info"><span>Python</span><span>85%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-info"><span>PHP</span><span>70%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3><i class="fa-solid fa-database"></i> Database</h3>
+                    <div class="skill-items">
+                        <div class="skill">
+                            <div class="skill-info"><span>MongoDB</span><span>80%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-info"><span>MySQL</span><span>85%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3><i class="fa-solid fa-toolbox"></i> Tools & Others</h3>
+                    <div class="skill-items">
+                        <div class="skill">
+                            <div class="skill-info"><span>Git & GitHub</span><span>90%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-info"><span>VS Code</span><span>95%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-info"><span>RESTful APIs</span><span>85%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section-padding">
+            <div class="section-header reveal">
+                <h2 class="section-title">Featured <span>Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="project-filters reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="ai">AI / ML</button>
+            </div>
+
+            <div class="projects-grid reveal">
+                <!-- Project 1 -->
+                <div class="project-card glass-card" data-category="fullstack">
+                    <div class="project-image">
+                        <div class="mock-img ecom-img"></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="#" class="project-link"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">Full Stack</span>
+                        <h3 class="project-title">Premium E-Commerce</h3>
+                        <p class="project-desc">A full-stack e-commerce platform with a modern UI, seamless payment
+                            integration, and a comprehensive admin dashboard.</p>
+                        <div class="project-tech">
+                            <span>React</span><span>Node.js</span><span>MongoDB</span><span>Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card" data-category="ai">
+                    <div class="project-image">
+                        <div class="mock-img ai-img"></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="#" class="project-link"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">AI / ML</span>
+                        <h3 class="project-title">AI Chatbot UI</h3>
+                        <p class="project-desc">A highly responsive and intelligent conversational interface mimicking
+                            advanced AI systems like ChatGPT.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span><span>OpenAI API</span><span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card" data-category="fullstack">
+                    <div class="project-image">
+                        <div class="mock-img crop-img"></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="#" class="project-link"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">Data / Web</span>
+                        <h3 class="project-title">Smart Crop Advisor</h3>
+                        <p class="project-desc">An intelligent system that recommends crops based on soil metrics and
+                            weather conditions to optimize yield.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>Flask</span><span>Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card glass-card" data-category="frontend">
+                    <div class="project-image">
+                        <div class="mock-img dash-img"></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="#" class="project-link"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">Frontend</span>
+                        <h3 class="project-title">Analytics Dashboard UI</h3>
+                        <p class="project-desc">A complex, responsive dashboard interface featuring beautiful charts,
+                            data tables, and dynamic widgets.</p>
+                        <div class="project-tech">
+                            <span>HTML</span><span>CSS</span><span>Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="certificates section-padding">
+            <div class="section-header reveal">
+                <h2 class="section-title">My <span>Certifications</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="certificates-grid reveal">
+                <div class="certificate-card glass-card">
+                    <div class="cert-image-wrapper">
+                        <img src="assets/cert1.jpg" alt="Certificate 1" class="cert-img"
+                            onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%3Crect%20fill%3D%22%232a2a35%22%20width%3D%22600%22%20height%3D%22400%22%2F%3E%3Ctext%20fill%3D%22%236366f1%22%20font-family%3D%22sans-serif%22%20font-size%3D%2230%22%20dy%3D%2210.5%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3Ecert1.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                    </div>
+                </div>
+                <div class="certificate-card glass-card">
+                    <div class="cert-image-wrapper">
+                        <img src="assets/cert2.jpg" alt="Certificate 2" class="cert-img"
+                            onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%3Crect%20fill%3D%22%232a2a35%22%20width%3D%22600%22%20height%3D%22400%22%2F%3E%3Ctext%20fill%3D%22%236366f1%22%20font-family%3D%22sans-serif%22%20font-size%3D%2230%22%20dy%3D%2210.5%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3Ecert2.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                    </div>
+                </div>
+                <div class="certificate-card glass-card">
+                    <div class="cert-image-wrapper">
+                        <img src="assets/cert3.jpg" alt="Certificate 3" class="cert-img"
+                            onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%3Crect%20fill%3D%22%232a2a35%22%20width%3D%22600%22%20height%3D%22400%22%2F%3E%3Ctext%20fill%3D%22%236366f1%22%20font-family%3D%22sans-serif%22%20font-size%3D%2230%22%20dy%3D%2210.5%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%3Ecert3.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements & Stats -->
+        <section class="achievements section-padding">
+            <div class="stats-container reveal">
+                <div class="stat-box glass-card">
+                    <i class="fa-solid fa-code"></i>
+                    <h3 class="counter" data-target="25">0</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-box glass-card">
+                    <i class="fa-solid fa-certificate"></i>
+                    <h3 class="counter" data-target="10">0</h3>
+                    <p>Certifications</p>
+                </div>
+                <div class="stat-box glass-card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3 class="counter" data-target="150">0</h3>
+                    <p>Hours of Coding</p>
+                </div>
+                <div class="stat-box glass-card">
+                    <i class="fa-solid fa-trophy"></i>
+                    <h3 class="counter" data-target="1">0</h3>
+                    <p>Hackathons Won</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="section-header reveal">
+                <h2 class="section-title">Let's <span>Connect</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="contact-container reveal">
+                <div class="contact-info glass-card">
+                    <h3>Get in Touch</h3>
+                    <p>I'm currently seeking exciting internships, collaborative projects, and research opportunities in
+                        the AI/ML and software engineering space. Let's build the future together.</p>
+
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <span>esudarshanbhadule@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+                            <div class="info-text">
+                                <h4>Phone</h4>
+                                <span>+91 9356653965</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="info-text">
+                                <h4>Location</h4>
+                                <span>India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper glass-card">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                            <label for="name">Your Name</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                            <label for="email">Your Email</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary glow-effect">
+                            Send Message <i class="fa-regular fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>Sudarshan Bhadule</h2>
+                <p class="footer-quote">"Code with purpose."</p>
+            </div>
+            <div class="footer-links">
+                <div class="social-links">
+                    <a href="[Your GitHub]" target="_blank" class="social-icon" aria-label="GitHub"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="linkedin.com/in/sudarshan-bhadule-31a409380" target="_blank" class="social-icon"
+                        aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" class="social-icon" aria-label="Twitter"><i
+                            class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" target="_blank" class="social-icon" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Sudarshan Bhadule
+                . All rights reserved.</p>
+            <p class="crafted-with">Crafted with <i class="fa-solid fa-heart"></i> & Code</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="back-to-top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
